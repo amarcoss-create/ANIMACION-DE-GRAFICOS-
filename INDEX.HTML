@@ -1,0 +1,126 @@
+<html>
+<head>
+    <title>Cohete Espacial</title>
+
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    #contenedor{
+        width: 400px;
+        height: 300px;
+        border: 1px solid black;
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+        background: black;
+    }
+
+.estrellas{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+}
+
+.e1{
+    box-shadow:
+        20px 30px white,
+        150px 100px white,
+        300px 50px white,
+        300px 280px white;
+
+    animation: mover1 3s linear infinite;
+}
+
+.e2{
+    box-shadow:
+        80px 60px white,
+        200px 150px white,
+        350px 90px white,
+        120px 200px white,
+        120px 270px white;
+
+    animation: mover2 2s linear infinite;
+}
+
+.e3{
+    box-shadow:
+        50px 10px white,
+        180px 70px white,
+        280px 180px white,
+        280px 290px white;
+
+    animation: mover3 1s linear infinite;
+}
+
+@keyframes mover1{
+    from{ left: 300px; }
+    to{ left: -400px; }
+}
+
+@keyframes mover2{
+    from{ left: 300px; }
+    to{ left: -400px; }
+}
+
+@keyframes mover3{
+    from{ left: 300px; }
+    to{ left: -400px; }
+}
+
+   
+    #cohete{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+
+        top: 110px;
+        left: 160px;
+    }
+
+    #cohete img{
+        width: 80px;
+        height: 80px;
+    }
+
+    /* #galaxia{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+
+        top: 0px;
+        left: 200px;
+     }
+    #galaxia img{
+        width: 200px;
+        height: 200px;
+    } */
+
+
+    </style>
+</head>
+
+<body>
+
+<div id="contenedor">
+
+    <div class="estrellas e1"></div>
+    <div class="estrellas e2"></div>
+    <div class="estrellas e3"></div>
+
+    <div id="cohete">
+        <img src="./IMG/pizza-tower-rocket.gif">
+    </div>
+
+    <!-- <div id="galaxia">
+        <img src="./IMG/galaxia.gif">
+    </div> -->
+    
+</div>
+
+</body>
+</html>
