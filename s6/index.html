@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFECTO PARALLAX</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .contenedor{
+            width: 1200px;
+            height: 700px;
+            background-image:url(img/fondo.png) ;
+            background-size: cover;
+            position: absolute;
+            z-index: 1;
+            left: 200px;
+        }
+        .ventana{
+            width: 1400px;
+            height: 400px;
+            background-image:url(img/ventana.png) ;
+            background-size: cover;
+            position: absolute;
+            top: 120px;
+            left: 0px;
+            z-index: 0;
+
+            animation: ventana 20s linear 1;
+        }
+        @keyframes ventana{
+            from{
+                left: 0px;
+            }
+            to{
+                left: 200px;
+            }
+        }
+        .perro{
+            width: 200px;
+            height: 200px;
+            background-image: url(img/perro.gif);
+            background-size: cover;
+            position: absolute;
+            top: 550px;
+            left: -50px;
+            z-index: 2;
+
+            animation: perro 8s linear 1;
+        }
+        @keyframes perro{
+            0%{
+                left: -50px;
+            }
+            100%{
+                left: 1400px;
+            }
+        }
+        .nubes{
+            width: 200px;
+            height: 50px;
+            background-image: url(img/nube.png);
+            background-size: cover;
+            position: absolute;
+            top: 230px;
+            left: 200px;
+            z-index: 0;
+
+            animation: nubes 100s linear infinite;
+        }
+        @keyframes nubes{
+            from{
+                left: 200px;
+            }
+            to{
+                left: 1200px;
+            }
+        }
+         
+        .pelota{
+            width: 100px;
+            height: 50px;
+            background-image: url(img/pelota.png);
+            background-size: cover;
+            position: absolute;
+            top: 400px;
+            left: -20px;
+            z-index: 2;
+
+            animation: pelota 2s linear 1;
+        }
+        @keyframes pelota{
+            0%{
+                left: -100px;
+                top: 400px;
+                transform: rotate(0deg);
+               }
+            100%{
+                left: 1300px;
+                top: 400px;
+                transform: rotate(1080deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor"></div>
+    <div class="ventana"></div>
+    <div class="perro"></div>
+    <div class="nubes"></div>
+    <div class="pelota"></div>
+</body>
+</html>
