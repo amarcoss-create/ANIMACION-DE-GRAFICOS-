@@ -12,11 +12,18 @@
         .contenedor{
             width: 1200px;
             height: 700px;
+            z-index: 5;
+            left: 200px;
+            position: absolute;
+            overflow: hidden;
+        }
+        .fondo{
+            width: 1200px;
+            height: 700px;
             background-image:url(img/fondo.png) ;
             background-size: cover;
             position: absolute;
             z-index: 1;
-            left: 200px;
         }
         .ventana{
             width: 1400px;
@@ -32,10 +39,10 @@
         }
         @keyframes ventana{
             from{
-                left: 0px;
+                left: -200px;
             }
             to{
-                left: 200px;
+                left: 0px;
             }
         }
         .perro{
@@ -45,17 +52,27 @@
             background-size: cover;
             position: absolute;
             top: 550px;
-            left: -50px;
+            left: -150px;
             z-index: 2;
 
-            animation: perro 8s linear 1;
+            animation: perro 12s linear 1;
         }
         @keyframes perro{
             0%{
-                left: -50px;
+                left: -150px;
+                transform: scaleX(1);
+            }
+            49%{
+                left: 1400px;
+                transform: scaleX(1);
+            }
+            50%{
+                left: 1400px;
+                transform: scaleX(-1);
             }
             100%{
-                left: 1400px;
+                left: -150px;
+                transform: scaleX(-1);
             }
         }
         .nubes{
@@ -71,14 +88,14 @@
             animation: nubes 100s linear infinite;
         }
         @keyframes nubes{
-            from{
+            0%{
                 left: 200px;
             }
-            to{
+            100%{
                 left: 1200px;
             }
+            
         }
-         
         .pelota{
             width: 100px;
             height: 50px;
@@ -86,8 +103,8 @@
             background-size: cover;
             position: absolute;
             top: 400px;
-            left: -20px;
-            z-index: 2;
+            left: -100px;
+            z-index: 3;
 
             animation: pelota 2s linear 1;
         }
@@ -103,14 +120,56 @@
                 transform: rotate(1080deg);
             }
         }
+        .fantasma{
+            width: 200px;
+            height: 200px;
+            background-image: url(img/ZZ5E.gif);
+            background-size: cover;
+            position: absolute;
+            top: 350px;
+            left: 720px;
+            z-index: 2;
+        }
+        .pensamiento{
+            position: absolute;
+            top: 600px;
+            left: 700px;
+            background: white;
+            padding: 10px;
+            border-radius: 20px;
+            border: 2px solid black;
+            font-family: Arial;
+            font-size: 20px;
+            opacity: 0;
+            z-index: 5;
+            animation: pensamiento 16s linear 1;
+        }
+        @keyframes pensamiento{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0;
+            }
+            60%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            } 
+        }
 
     </style>
 </head>
 <body>
-    <div class="contenedor"></div>
-    <div class="ventana"></div>
-    <div class="perro"></div>
-    <div class="nubes"></div>
-    <div class="pelota"></div>
+    <div class="contenedor">
+        <div class="fondo"></div>
+        <div class="ventana"></div>
+        <div class="perro"></div>
+        <div class="pensamiento"> No pude encontrar la pelota...</div>
+        <div class="nubes"></div>
+        <div class="pelota"></div>
+        <div class="fantasma"></div>
+    </div>
 </body>
 </html>
