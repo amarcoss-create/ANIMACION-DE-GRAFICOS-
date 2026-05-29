@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>Tabla de ajedrez</title>
+<style type="text/css">
+*{
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+
+#cuadrito1{
+    background-color: black;
+}
+
+#cuadrito2{
+    background-color: yellow;
+}
+
+#cuadrito1, #cuadrito2{
+    height: 100px;
+    width: 100px;
+} 
+
+#tablero{
+    width: 800px;
+    height: 800px;
+    border: 3px solid black;
+}
+
+.fila{
+    width: 800px;
+    height: 100px;
+}
+</style>
+</head>
+<body>
+
+<div id="tablero">
+
+    <div class="fila">
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+    </div>
+
+    <div class="fila">
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+    </div>
+
+    <div class="fila">
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+    </div>
+
+    <div class="fila">
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+    </div>
+
+    <div class="fila">
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+    </div>
+
+    <div class="fila">
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+    </div>
+
+    <div class="fila">
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+    </div>
+
+    <div class="fila">
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+        <div id="cuadrito2"></div>
+        <div id="cuadrito1"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
