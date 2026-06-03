@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+}
+.contenedor{
+    width:500px;
+    height: 800px;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.cielo{
+    position: absolute;
+    left: -200px;
+    top: -50px;
+    filter: blur(5px);
+    animation: cielo 30s 1 forwards;
+}
+@keyframes cielo{
+    from{
+        scale: 100%;
+    }
+    to{
+        scale: 130%;
+    }
+}
+.montaña{
+    position: absolute;
+    left: -600px;
+    animation: montaña 20s 1 forwards;
+}
+@keyframes montaña{
+    from{
+        top: 0px;
+        scale: 100%;
+        filter: blur(5px);
+    }
+    to{
+        top: -30px;
+        scale: 110%;
+        filter: blur(0px);
+    }
+}
+.persona{
+    position: absolute;
+    width: 600px;
+    left: 0px;
+    top: 280px;
+    animation: persona 10s 1 forwards;
+}
+@keyframes persona{
+    from{
+        scale: 100%;
+    }
+    to{
+        scale: 90%;
+    }
+
+}
+.neblina{
+    position: absolute;
+    width: 1000px;
+    left: -150px;
+    top: 400px;
+    animation: neblina 10s 1 forwards;
+}
+@keyframes neblina{
+    from{
+        left: -150px;
+    }
+    to{
+        left: 100px;
+    }
+}
+.titulo{
+    position: absolute;
+    top: 100px;
+    left: -100px;
+}
+.titulo .fi10{
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 20;
+
+    opacity: 0;
+
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+
+    animation: textanimation 4s forwards;
+}
+@keyframes textanimation{
+    0%{
+        opacity: 0;
+        stroke-dashoffset: 5000;
+        fill: transparent;
+    }
+    80%{
+        opacity: 1;
+        fill: transparent;
+    }
+    100%{
+        opacity: 1;
+        fill: #fff;
+        stroke-dashoffset: 0;
+    }
+}
