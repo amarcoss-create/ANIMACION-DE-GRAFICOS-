@@ -3,38 +3,55 @@
 <title>Tabla de ajedrez</title>
 <style type="text/css">
 *{
-    margin: 0px;
-    padding: 0px;
-    float: left;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#cuadrito1{
+body{
     background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
 }
 
-#cuadrito2{
-    background-color: yellow;
+h1{
+    color: white;
+    margin-bottom: 20px;
+    font-family: Arial;
 }
-
-#cuadrito1, #cuadrito2{
-    height: 100px;
-    width: 100px;
-} 
 
 #tablero{
     width: 800px;
     height: 800px;
-    border: 3px solid black;
+
+    border: 5px solid white;
 }
 
-.fila{
-    width: 800px;
-    height: 100px;
+.boton{
+    margin-top: 20px;
+
+    background-color: blue;
+    color: white;
+
+    padding: 10px 20px;
+    text-decoration: none;
+
+    border-radius: 10px;
+    font-family: Arial;
+}
+
+.boton:hover{
+    background-color: navy;
 }
 </style>
 </head>
 <body>
-
+<h1>Tablero de Ajedrez</h1>
 <div id="tablero">
 
     <div class="fila">
@@ -126,6 +143,6 @@
     </div>
 
 </div>
-
+<a href="../index.html" class="boton">Volver al menú</a>
 </body>
 </html>
