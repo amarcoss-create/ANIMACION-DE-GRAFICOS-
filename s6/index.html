@@ -1,175 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EFECTO PARALLAX</title>
-    <style>
-        *{
-            padding: 0px;
-            margin: 0px;
-        }
-        .contenedor{
-            width: 1200px;
-            height: 700px;
-            z-index: 5;
-            left: 200px;
-            position: absolute;
-            overflow: hidden;
-        }
-        .fondo{
-            width: 1200px;
-            height: 700px;
-            background-image:url(img/fondo.png) ;
-            background-size: cover;
-            position: absolute;
-            z-index: 1;
-        }
-        .ventana{
-            width: 1400px;
-            height: 400px;
-            background-image:url(img/ventana.png) ;
-            background-size: cover;
-            position: absolute;
-            top: 120px;
-            left: 0px;
-            z-index: 0;
+    <title>Efecto Parallax</title>
 
-            animation: ventana 20s linear 1;
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
+
+        body{
+            background-color:black;
+
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+
+            min-height:100vh;
+        }
+
+        h1{
+            color:white;
+            font-family:Arial;
+            margin-bottom:20px;
+        }
+
+        .contenedor{
+            width:1200px;
+            height:700px;
+
+            position:relative;
+            overflow:hidden;
+
+            border:5px solid white;
+        }
+
+        .fondo{
+            width:1200px;
+            height:700px;
+
+            background-image:url(img/fondo.png);
+            background-size:cover;
+
+            position:absolute;
+            z-index:1;
+        }
+
+        .ventana{
+            width:1400px;
+            height:400px;
+
+            background-image:url(img/ventana.png);
+            background-size:cover;
+
+            position:absolute;
+
+            top:120px;
+            left:0;
+
+            z-index:0;
+
+            animation:ventana 20s linear 1;
+        }
+
         @keyframes ventana{
             from{
-                left: -200px;
+                left:-200px;
             }
-            to{
-                left: 0px;
-            }
-        }
-        .perro{
-            width: 200px;
-            height: 200px;
-            background-image: url(img/perro.gif);
-            background-size: cover;
-            position: absolute;
-            top: 550px;
-            left: -150px;
-            z-index: 2;
 
-            animation: perro 12s linear 1;
+            to{
+                left:0;
+            }
         }
+
+        .perro{
+            width:200px;
+            height:200px;
+
+            background-image:url(img/perro.gif);
+            background-size:cover;
+
+            position:absolute;
+
+            top:550px;
+            left:-150px;
+
+            z-index:2;
+
+            animation:perro 12s linear 1;
+        }
+
         @keyframes perro{
             0%{
-                left: -150px;
-                transform: scaleX(1);
+                left:-150px;
+                transform:scaleX(1);
             }
-            49%{
-                left: 1400px;
-                transform: scaleX(1);
-            }
-            50%{
-                left: 1400px;
-                transform: scaleX(-1);
-            }
-            100%{
-                left: -150px;
-                transform: scaleX(-1);
-            }
-        }
-        .nubes{
-            width: 200px;
-            height: 50px;
-            background-image: url(img/nube.png);
-            background-size: cover;
-            position: absolute;
-            top: 230px;
-            left: 200px;
-            z-index: 0;
 
-            animation: nubes 100s linear infinite;
+            49%{
+                left:1400px;
+                transform:scaleX(1);
+            }
+
+            50%{
+                left:1400px;
+                transform:scaleX(-1);
+            }
+
+            100%{
+                left:-150px;
+                transform:scaleX(-1);
+            }
         }
+
+        .nubes{
+            width:200px;
+            height:50px;
+
+            background-image:url(img/nube.png);
+            background-size:cover;
+
+            position:absolute;
+
+            top:230px;
+            left:200px;
+
+            z-index:0;
+
+            animation:nubes 100s linear infinite;
+        }
+
         @keyframes nubes{
             0%{
-                left: 200px;
+                left:200px;
             }
-            100%{
-                left: 1200px;
-            }
-            
-        }
-        .pelota{
-            width: 100px;
-            height: 50px;
-            background-image: url(img/pelota.png);
-            background-size: cover;
-            position: absolute;
-            top: 400px;
-            left: -100px;
-            z-index: 3;
 
-            animation: pelota 2s linear 1;
+            100%{
+                left:1200px;
+            }
         }
+
+        .pelota{
+            width:100px;
+            height:50px;
+
+            background-image:url(img/pelota.png);
+            background-size:cover;
+
+            position:absolute;
+
+            top:400px;
+            left:-100px;
+
+            z-index:3;
+
+            animation:pelota 2s linear 1;
+        }
+
         @keyframes pelota{
             0%{
-                left: -100px;
-                top: 400px;
-                transform: rotate(0deg);
-               }
+                left:-100px;
+                top:400px;
+                transform:rotate(0deg);
+            }
+
             100%{
-                left: 1300px;
-                top: 400px;
-                transform: rotate(1080deg);
+                left:1300px;
+                top:400px;
+                transform:rotate(1080deg);
             }
         }
+
         .fantasma{
-            width: 200px;
-            height: 200px;
-            background-image: url(img/ZZ5E.gif);
-            background-size: cover;
-            position: absolute;
-            top: 350px;
-            left: 720px;
-            z-index: 2;
+            width:200px;
+            height:200px;
+
+            background-image:url(img/ZZ5E.gif);
+            background-size:cover;
+
+            position:absolute;
+
+            top:350px;
+            left:720px;
+
+            z-index:2;
         }
+
         .pensamiento{
-            position: absolute;
-            top: 600px;
-            left: 700px;
-            background: white;
-            padding: 10px;
-            border-radius: 20px;
-            border: 2px solid black;
-            font-family: Arial;
-            font-size: 20px;
-            opacity: 0;
-            z-index: 5;
-            animation: pensamiento 16s linear 1;
+            position:absolute;
+
+            top:600px;
+            left:700px;
+
+            background:white;
+            color:black;
+
+            padding:10px;
+
+            border-radius:20px;
+            border:2px solid black;
+
+            font-family:Arial;
+            font-size:20px;
+
+            opacity:0;
+
+            z-index:5;
+
+            animation:pensamiento 16s linear 1;
         }
+
         @keyframes pensamiento{
             0%{
-                opacity: 0;
+                opacity:0;
             }
+
             50%{
-                opacity: 0;
+                opacity:0;
             }
+
             60%{
-                opacity: 1;
+                opacity:1;
             }
+
             100%{
-                opacity: 0;
-            } 
+                opacity:0;
+            }
+        }
+
+        .boton{
+            margin-top:20px;
+
+            background-color:blue;
+            color:white;
+
+            padding:10px 20px;
+
+            text-decoration:none;
+
+            border-radius:10px;
+
+            font-family:Arial;
+        }
+
+        .boton:hover{
+            background-color:navy;
         }
 
     </style>
 </head>
+
 <body>
+
+    <h1>Efecto Parallax</h1>
+
     <div class="contenedor">
         <div class="fondo"></div>
         <div class="ventana"></div>
         <div class="perro"></div>
-        <div class="pensamiento"> No pude encontrar la pelota...</div>
+
+        <div class="pensamiento">
+            No pude encontrar la pelota...
+        </div>
+
         <div class="nubes"></div>
         <div class="pelota"></div>
         <div class="fantasma"></div>
     </div>
+
+    <a href="../index.html" class="boton">
+        Volver al menú
+    </a>
+
 </body>
 </html>
