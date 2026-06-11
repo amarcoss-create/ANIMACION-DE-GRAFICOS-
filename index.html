@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto General</title>
+    <title>Portafolio de Proyectos</title>
 
     <style>
         *{
@@ -14,52 +14,79 @@
         }
 
         body{
-            background-color: #111;
-            color: white;
+            min-height: 100vh;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            height: 100vh;
+            background: linear-gradient(135deg,#111,#1f2937);
+            color: white;
+            padding: 20px;
         }
 
         .contenedor{
+            width: 100%;
+            max-width: 900px;
+
             text-align: center;
+
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 20px;
         }
 
         h1{
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        p{
+            color: #cfcfcf;
             margin-bottom: 30px;
-            font-size: 40px;
         }
 
         .botones{
-            display: flex;
-            gap: 20px;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+            gap: 15px;
         }
 
         a{
             text-decoration: none;
             color: white;
+
             background-color: #2563eb;
 
-            padding: 15px 30px;
+            padding: 15px;
             border-radius: 10px;
 
-            transition: 0.3s;
+            transition: .3s;
         }
 
         a:hover{
+            transform: translateY(-5px);
             background-color: #1d4ed8;
-            transform: scale(1.05);
         }
+
+        footer{
+            margin-top: 30px;
+            color: #bdbdbd;
+            font-size: 14px;
+        }
+
     </style>
 </head>
 <body>
 
     <div class="contenedor">
-        <h1>Mis Proyectos</h1>
+
+        <h1>Mi Portafolio Web</h1>
+
+        <p>
+            Repositorio que reúne los proyectos y prácticas
+            desarrollados durante el curso.
+        </p>
 
         <div class="botones">
             <a href="./s1/index.html">Proyecto S1</a>
@@ -70,6 +97,11 @@
             <a href="./s6/index.html">Proyecto S6</a>
             <a href="./s7/index.html">Proyecto S7</a>
         </div>
+
+        <footer>
+            Desarrollado por Marcos José Segundo Inquiltupa
+        </footer>
+
     </div>
 
 </body>
