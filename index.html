@@ -3,81 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto S7</title>
+    <title>Proyectos</title>
 
     <style>
         *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         body{
-            min-height:100vh;
+            min-height: 100vh;
 
-            display:flex;
-            justify-content:center;
-            align-items:center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            background-color:black;
-            color:white;
+            background-color: black;
+            color: white;
+            padding: 20px;
         }
 
         .contenedor{
-            width:800px;
+            width: 100%;
+            max-width: 900px;
 
-            text-align:center;
+            text-align: center;
 
-            background-color:darkslategray;
-
-            padding:40px;
-
-            border-radius:20px;
+            background-color: darkslategray;
+            padding: 40px;
+            border-radius: 20px;
         }
 
         h1{
-            font-size:45px;
-            margin-bottom:20px;
+            font-size: 45px;
+            margin-bottom: 10px;
+            color: white;
         }
 
         p{
-            font-size:20px;
-            margin-bottom:30px;
+            color: white;
+            margin-bottom: 30px;
         }
 
-        .boton{
-            text-decoration:none;
-
-            background-color:royalblue;
-            color:white;
-
-            padding:15px 30px;
-
-            border-radius:10px;
-
-            transition:0.3s;
+        .botones{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
         }
 
-        .boton:hover{
-            background-color:blue;
+        a{
+            text-decoration: none;
+            color: white;
+
+            background-color: royalblue;
+
+            padding: 15px;
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+        a:hover{
+            transform: translateY(-5px);
+            background-color: blue;
+        }
+
+        footer{
+            margin-top: 30px;
+            color: white;
+            font-size: 14px;
         }
 
     </style>
 </head>
+
 <body>
 
     <div class="contenedor">
 
-        <h1>Proyecto S7</h1>
+        <h1>Trabajos Lugar</h1>
 
         <p>
-            Trabajo desarrollado durante el curso.
+            zzzzZZZZ
         </p>
 
-        <a href="../index.html" class="boton">
-            Volver al menú
-        </a>
+        <div class="botones">
+            <a href="./s1/index.html">Proyecto S1</a>
+            <a href="./s2/index.html">Proyecto S2</a>
+            <a href="./s3/index.html">Proyecto S3</a>
+            <a href="./s4/index.html">Proyecto S4</a>
+            <a href="./s5/index.html">Proyecto S5</a>
+            <a href="./s6/index.html">Proyecto S6</a>
+            <a href="./s7/index.html">Proyecto S7</a>
+        </div>
+
+        <footer>
+            Desarrollado por Mi
+        </footer>
 
     </div>
 
