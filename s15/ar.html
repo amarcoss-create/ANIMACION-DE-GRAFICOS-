@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Realidad Aumentada</title>
+
+<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
+
+</head>
+
+<body>
+
+<a-scene
+
+mindar-image="imageTargetSrc: marcador/target.mind; autoStart: true;"
+
+color-space="sRGB"
+
+renderer="colorManagement: true"
+
+vr-mode-ui="enabled: false"
+
+device-orientation-permission-ui="enabled: false"
+
+>
+
+<a-assets>
+
+<a-asset-item
+id="bill"
+src="modelos/BillCipher.glb">
+</a-asset-item>
+
+<audio
+id="audio"
+src="audio/bill.mp3"
+preload="auto">
+</audio>
+
+</a-assets>
+
+<a-camera
+position="0 0 0"
+look-controls="enabled: false">
+</a-camera>
+
+<a-entity
+id="target"
+mindar-image-target="targetIndex: 0">
+
+<a-gltf-model
+
+id="modelo"
+
+src="#bill"
+
+position="0 0 0"
+
+rotation="0 0 0"
+
+scale="0.2 0.2 0.2"
+
+animation-mixer
+
+>
+
+</a-gltf-model>
+
+</a-entity>
+
+</a-scene>
+
+<script>
+
+const target=document.querySelector("#target");
+const audio=document.querySelector("#audio");
+
+target.addEventListener("targetFound",()=>{
+
+audio.play();
+
+});
+
+target.addEventListener("targetLost",()=>{
+
+audio.pause();
+
+audio.currentTime=0;
+
+});
+
+</script>
+
+</body>
+
+</html>

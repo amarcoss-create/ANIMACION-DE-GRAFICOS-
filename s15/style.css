@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #111;
+    color: white;
+
+    padding: 20px;
+}
+
+.contenedor{
+
+    width: 100%;
+    max-width: 900px;
+
+    background: #1f1f1f;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+
+}
+
+h1{
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+
+}
+
+.descripcion{
+
+    font-size: 20px;
+
+    margin-bottom: 35px;
+
+    line-height: 1.6;
+
+}
+
+.qr{
+
+    margin-bottom: 35px;
+
+}
+
+.qr h2{
+
+    margin-bottom: 15px;
+
+}
+
+#codigoQR{
+
+    width: 250px;
+
+    max-width: 100%;
+
+    border-radius: 15px;
+
+    background: white;
+
+    padding: 10px;
+
+}
+
+#btnMarcador{
+
+    margin-top: 15px;
+
+    padding: 15px 35px;
+
+    font-size: 18px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: royalblue;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+#btnMarcador:hover{
+
+    background: dodgerblue;
+
+    transform: scale(1.05);
+
+}
+
+#contenedorMarcador{
+
+    display: none;
+
+    margin-top: 40px;
+
+}
+
+#contenedorMarcador h2{
+
+    margin-bottom: 20px;
+
+}
+
+#marcador{
+
+    width: 500px;
+
+    max-width: 100%;
+
+    border-radius: 15px;
+
+    background: white;
+
+    padding: 10px;
+
+}
